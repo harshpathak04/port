@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f172a;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+/* Neon Text Effect */
+.neon-text {
+  text-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 20px currentColor,
+    0 0 40px currentColor;
+  animation: neon-flicker 2s infinite alternate;
+}
+
+@keyframes neon-flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 20px currentColor,
+      0 0 40px currentColor;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+/* Starfield Background */
+.stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 
+    1779px 1890px #fff, 1237px 1122px #fff, 2000px 1543px #fff, 1346px 1166px #fff,
+    1776px 1457px #fff, 1093px 1928px #fff, 1717px 1306px #fff, 1999px 1632px #fff,
+    1849px 1611px #fff, 1363px 1373px #fff, 1474px 1657px #fff, 1718px 1043px #fff,
+    1963px 1971px #fff, 1119px 1696px #fff, 1486px 1917px #fff, 1875px 1934px #fff,
+    1211px 1982px #fff, 1355px 1266px #fff, 1473px 1677px #fff, 1901px 1137px #fff,
+    1417px 1673px #fff, 1999px 1187px #fff, 1879px 1449px #fff, 1134px 1079px #fff,
+    1394px 1399px #fff, 1602px 1386px #fff, 1870px 1616px #fff, 1708px 1756px #fff,
+    1646px 1778px #fff, 1494px 1143px #fff, 1569px 1361px #fff, 1963px 1999px #fff,
+    1892px 1188px #fff, 1704px 1756px #fff, 1945px 1974px #fff, 1697px 1428px #fff,
+    1977px 1999px #fff, 1193px 1147px #fff, 1417px 1907px #fff, 1829px 1597px #fff,
+    1269px 1676px #fff, 1654px 1861px #fff, 1832px 1363px #fff, 1444px 1929px #fff,
+    1796px 1378px #fff, 1744px 1874px #fff, 1902px 1677px #fff, 1825px 1826px #fff,
+    1959px 1365px #fff, 1888px 1512px #fff, 1779px 1685px #fff, 1302px 1932px #fff,
+    1765px 1547px #fff, 1572px 1141px #fff, 1992px 1640px #fff, 1195px 1969px #fff,
+    1714px 1582px #fff, 1887px 1997px #fff, 1693px 1947px #fff, 1815px 1211px #fff,
+    1737px 1590px #fff, 1487px 1629px #fff, 1995px 1215px #fff, 1721px 1840px #fff,
+    1626px 1926px #fff, 1761px 1799px #fff, 1641px 1666px #fff, 1697px 1953px #fff,
+    1819px 1707px #fff, 1957px 1900px #fff, 1634px 1303px #fff, 1697px 1395px #fff,
+    1972px 1311px #fff, 1954px 1384px #fff, 1934px 1801px #fff, 1633px 1457px #fff,
+    1936px 1573px #fff, 1715px 1839px #fff, 1784px 1414px #fff, 1921px 1170px #fff,
+    1904px 1699px #fff, 1742px 1618px #fff, 1976px 1933px #fff, 1609px 1378px #fff;
+  animation: animStar 50s linear infinite;
+}
+
+.stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 
+    1779px 1890px #fff, 1237px 1122px #fff, 2000px 1543px #fff, 1346px 1166px #fff,
+    1776px 1457px #fff, 1093px 1928px #fff, 1717px 1306px #fff, 1999px 1632px #fff,
+    1849px 1611px #fff, 1363px 1373px #fff, 1474px 1657px #fff, 1718px 1043px #fff,
+    1963px 1971px #fff, 1119px 1696px #fff, 1486px 1917px #fff, 1875px 1934px #fff,
+    1211px 1982px #fff, 1355px 1266px #fff, 1473px 1677px #fff, 1901px 1137px #fff;
+  animation: animStar 100s linear infinite;
+}
+
+.stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 
+    1779px 1890px #fff, 1237px 1122px #fff, 2000px 1543px #fff, 1346px 1166px #fff,
+    1776px 1457px #fff, 1093px 1928px #fff, 1717px 1306px #fff, 1999px 1632px #fff,
+    1849px 1611px #fff, 1363px 1373px #fff;
+  animation: animStar 150s linear infinite;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+/* Shooting Stars */
+.shooting-star {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(-45deg, #5f91ff, rgba(0, 0, 255, 0));
+  border-radius: 999px;
+  filter: drop-shadow(0 0 6px #699bff);
+  animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
+}
+
+.shooting-star:nth-child(1) {
+  animation-delay: 1000ms;
+}
+
+.shooting-star:nth-child(2) {
+  animation-delay: 2000ms;
+}
+
+.shooting-star:nth-child(3) {
+  animation-delay: 3000ms;
+}
+
+@keyframes tail {
+  0% {
+    width: 0;
+  }
+  30% {
+    width: 100px;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes shooting {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(300px);
+  }
+}
+
+/* Glassmorphism Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #8b5cf6, #ec4899);
+}
+
+/* Line Clamp Utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Smooth Transitions */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Focus Styles */
+input:focus, textarea:focus, button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+/* Hover Effects */
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Responsive Text */
+@media (max-width: 640px) {
+  .neon-text {
+    font-size: 2.5rem;
+  }
+}
+
+/* Loading Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
